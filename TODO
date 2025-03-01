@@ -15,3 +15,65 @@ add example per function
 3. downscale 
 4. geoid effect 
 5. bleding 
+
+@add the links to the functions 
+# applications
+https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/ta_hydrology_32.html #x
+- find the author and read his stuff 
+
+https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/sim_hydrology_8.html #x 
+- find the author and read his stuff
+
+https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/sim_rivflow_0.html
+https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/sim_rivflow_3.html
+https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/ta_compound_0.html
+--------------------------------------------------------------------------
+
+
+
+=============================================================================
+lables:
+DTM Filter (slope-based)*
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_filter_7.html
+> that package but before use the entire slop map 
+Terrain Clustering
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/tc_ta_morphometry_clustering.html
+
+GWR Downscaling *
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/statistics_regression_14.html
+
+fill:
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_7.html #x 
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_25.html #x
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_29.html #x
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_6.html #x
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_5.html #x
+
+->delta dtm 
+blend:
+Mosaicking (Grid Collections)*
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/grid_tools_38.html #x
+
+destrip:
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/contrib_perego_5.html
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/contrib_perego_6.html
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/contrib_perego.html
+
+application:
+Terrain Flooding*
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/ta_hydrology_32.html # x
+> random points from the river ( how many does this package require)
+
+Compound Basic Terrain Analysis
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/ta_compound_0.html
+Compound Hydrologic Terrain Analysis
+- https://saga-gis.sourceforge.io/saga_tool_doc/9.7.1/ta_compound_2.html
+######################################################################################
+saga-gis.sourceforge.io
+
+https://saga-gis.sourceforge.io/saga_api_doc/html/tool_8cpp_source.html
+
+https://dges.carleton.ca/CUOSGwiki/index.php/Automating_SAGA_Workflows_Using_Command_Line_Scripting#:~:text=To%20access%20the%20SAGA%20tools,the%20saga_cmd%20%2D%2Dhelp%20command
+
+https://sourceforge.net/p/saga-gis/wiki/Home/
+

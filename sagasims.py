@@ -319,3 +319,46 @@ def run_compound_basic_terrain_analysis(
         print("Compound Basic Terrain Analysis completed successfully.")
     else:
         print("Error:", result.stderr)
+
+def run_geomorphons(saga_cmd_path,input_dem, output_geomorphons, threshold_angle=1.0, radial_limit=10000.0, method=1, multi_scale_factor=3.0):
+    """
+    Run SAGA GIS Geomorphons tool using saga_cmd via Python subprocess.
+
+    Parameters:
+        input_dem (str): Path to the input DEM file.
+        output_geomorphons (str): Path to save the geomorphons output.
+        threshold_angle (float, optional): Flatness threshold angle (degrees). Defaults to 1.0.
+        radial_limit (float, optional): Radial limit (search radius) in map units. Defaults to 10000.0.
+        method (int, optional): Method choice (0 = multi scale, 1 = line tracing). Defaults to 1.
+        multi_scale_factor (float, optional): Multi-scale factor. Defaults to 3.0.
+    """
+
+
+    # Construct the command as a list of arguments
+    command = [
+        saga_cmd_path,
+        "ta_lighting", "8",
+        "-DEM", input_dem,
+        "-GEOMORPHONS", output_geomorphons,
+        "-THRESHOLD", str(threshold_angle),
+        "-RADIUS", str(radial_limit),
+        "-METHOD", str(method),
+        "-DLEVEL", str(multi_scale_factor)
+    ]
+
+    # Execute the command using subprocess
+    try:
+        print("Running SAGA GIS Geomorphons command...")
+        result = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+        # Print the output and error (if any)
+        print("SAGA GIS Command Output:")
+        print(result.stdout)
+        if result.stderr:
+            print("SAGA GIS Command Errors:")
+            print(result.stderr)
+
+    except subprocess.CalledProcessError as e:
+        print("An error occurred while running the SAGA GIS Geomorphons command.")
+        print(f"Return Code: {e.returncode}")
+        print(f"Error Output: {e.stderr}")

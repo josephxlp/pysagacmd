@@ -1,0 +1,17 @@
+make VRT and use windowslide to generate ground and non-ground with local slopes and stuff 
+appply this apprach to everything 
+# pysagacmdutils : change the name to this , and pupish a package 
+======================================================
+load the functions and modules 
+import the functions 
+transfer into a package with and publish this week 
+add example per function 
+=======================================================
+1. download sample data [x] 
+1.2. create gaps for self-predicitng [random]: swath + xsheet 
+2. fill the gaps 
+2.1 unsupervised 
+2.2 supervised 
+3. downscale 
+4. geoid effect 
+5. bleding 

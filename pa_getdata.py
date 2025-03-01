@@ -179,6 +179,8 @@ if __name__ == "__main__":
     varnames = np.array(list(dem_types.values()))
     varnames = np.array(['COP90','GEDI_L3'])
     file_paths = glob(gpkg_pattern)
+
+    file_paths = [i for i in file_paths if 'N09E105' in i]#N09E105
     print(f"Found {len(file_paths)} vector files")
 
     for rpath in file_paths:

@@ -58,14 +58,6 @@ def dms_to_dd(dms):
     return degrees + minutes + seconds if degrees >= 0 else degrees - minutes - seconds
 
 
-
-# try:isg_fpath and txt_fpath
-isg_fpath = r"c:\Users\Joseph\Downloads\Topo_DEM_Mekong_delta_excl_rivers_and_bedrock\igs\Brazil_2015_MAPGEO2015_gravG_20201222.isg"
-tif_fpath = isg_fpath.replace('.isg','_A.tif')
-# metadata, data_array = extract_metadata_and_data(isg_fpath)
-# print(metadata)
-# print(data_array.shape)
-
 def isg2tif_f1(isg_fpath,output_file):
     metadata, data_array = extract_metadata_and_data(isg_fpath)
     delta_lat = float(metadata['delta lat'])  # Resolution in latitude (decimal degrees)
@@ -141,3 +133,16 @@ def isg2tif_f2(input_file,output_file):
         dst.write(data_array, 1)
 
     print(f"isg2tif_f2 write to {output_file}")
+
+
+
+
+"""
+# try:isg_fpath and txt_fpath
+isg_fpath = r"c:\Users\Joseph\Downloads\Topo_DEM_Mekong_delta_excl_rivers_and_bedrock\igs\Brazil_2015_MAPGEO2015_gravG_20201222.isg"
+tif_fpath = isg_fpath.replace('.isg','_A.tif')
+# metadata, data_array = extract_metadata_and_data(isg_fpath)
+# print(metadata)
+# print(data_array.shape)
+
+"""
